@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const clothingApi = require('./clothing.js')
 const BrandModelSchema = new mongoose.Schema({
  name: String,
  country: String,
@@ -16,7 +15,7 @@ const getAllBrands = () => {
 }
 
 const getBrand = (id) => {
-    clothingApi.ClothingCollection.find({"brandId": id})
+    return BrandCollection.findOne({"brandId": id})
 }
 
 const addBrand = (itemData) => {

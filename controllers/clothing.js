@@ -36,10 +36,10 @@ clothingRouter.get('/clothing/:id', (req, res) => {
   })
 })
 
-clothingRouter.put('/clothing/edit/:id', (req, res) => {
+clothingRouter.put('/clothing/:id', (req, res) => {
   clothingApi.updateItem(req.params.id, req.body)
   .then(() => {
-    res.redirect('/clothing/:id')
+    res.redirect(`/clothing/${req.params.id}`)
   })
 })
 
