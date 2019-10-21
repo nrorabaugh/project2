@@ -1,16 +1,26 @@
 <div class="page">
     <h1 class="title">Time Capsule</h1>
     <h1>Selection</h1>
+
+    <nav>
+        <a href="/clothing/brands">
+            Shop by Brands
+        </a>
+        <a href="/clothing/users">
+            Shop by Users
+        </a>
+    </nav>
+
     <div class = "selection">
         {{#each clothes}}
-        <a href="/clothing/{{_id}}">
-            <div class = "item">
+        <div class = "item">
+            <a href="/clothing/{{_id}}">
                 <img src={{img}}/>
                 <h3>{{name}}</h3>
                 <p>{{brand}}</p>
                 <p>${{price}}</p>
-            </div>
-        </a>
+            </a>
+        </div>
         {{/each}}
     </div>
     <a href="/clothing/add">
