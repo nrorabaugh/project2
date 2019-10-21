@@ -25,7 +25,7 @@ brandRouter.get('/clothing/brands', (req, res) => {
 brandRouter.post('/clothing/brands/new', (req, res) => {
     brandApi.addBrand(req.body)
   .then(() => {
-    res.redirect("/brands")
+    res.redirect("/clothing/brands")
   })
 })
 
@@ -39,14 +39,14 @@ brandRouter.get('/clothing/brands/:id', (req, res) => {
 brandRouter.put('/clothing/brands/edit/:id', (req, res) => {
     brandApi.updateBrand(req.params.id, req.body)
   .then(() => {
-    res.redirect("/brands/:id")
+    res.redirect(`/clothing/brands/${req.params.id}`)
   })
 })
 
 brandRouter.delete('/clothing/brands/:id', (req, res) => {
     brandApi.deleteBrand(req.params.id)
   .then(() => {
-    res.redirect("/brands")
+    res.redirect("/clothing/brands")
   })
 })
 

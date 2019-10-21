@@ -25,7 +25,7 @@ userRouter.get('/clothing/users', (req, res) => {
 userRouter.post('/clothing/users', (req, res) => {
     userApi.addUser(req.body)
     .then(() => {
-      res.redirect('/users')
+      res.redirect('/clothing/users')
     })
 })
 
@@ -39,14 +39,14 @@ userRouter.get('/clothing/users/:id', (req, res) => {
 userRouter.put('/clothing/users/edit/:id', (req, res) => {
     userApi.updateUser(req.params.id, req.body)
   .then(() => {
-    res.redirect('/users/:id')
+    res.redirect(`/clothing/users/${req.params.id}`)
   })
 })
 
 userRouter.delete('/clothing/users/:id', (req, res) => {
     userApi.deleteUser(req.params.id)
   .then( () => {
-    res.redirect('/users')
+    res.redirect('/clothing/users')
   })
 })
 
