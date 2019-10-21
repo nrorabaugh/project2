@@ -37,8 +37,15 @@ img.solo {
 nav {
     width: 100vw;
     background-color: black;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav a {
     font-family: Helvetica;
+    font-weight: 100;
+    font-size: 26px;
+    color: lightgrey;
+    text-transform: uppercase;
+    padding: 20px;
 }
