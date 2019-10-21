@@ -4,10 +4,19 @@
     flex-direction: column;
 }
 
+.title {
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(140, 0, 0)
+}
+
 .selection {
     margin: 100px 175px;
     display: flex;
     justify-content: space-between;
+    flex-flow: wrap;
 }
 
 a {

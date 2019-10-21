@@ -1,12 +1,6 @@
 <div class="page">
+    <h1 class="title">Time Capsule</h1>
     <h1>Selection</h1>
-
-    <a href="/clothing/add">
-        <button>
-            Add New Item
-        </button>
-    </a>
-
     <div class = "selection">
         {{#each clothes}}
         <a href="/clothing/{{_id}}">
@@ -19,4 +13,9 @@
         </a>
         {{/each}}
     </div>
+    <a href="/clothing/add">
+        <button>
+            Add New Item
+        </button>
+    </a>
 </div>
