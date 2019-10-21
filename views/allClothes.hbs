@@ -1,0 +1,22 @@
+<div class="page">
+    <h1>Selection</h1>
+
+    <a href="/clothing/add">
+        <button>
+            Add New Item
+        </button>
+    </a>
+
+    <div class = "selection">
+        {{#each clothes}}
+        <a href="/clothing/{{_id}}">
+            <div class = "item">
+                <img src={{img}}/>
+                <h3>{{name}}</h3>
+                <p>{{brand}}</p>
+                <p>${{price}}</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+</div>

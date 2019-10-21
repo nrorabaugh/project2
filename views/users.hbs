@@ -1,0 +1,9 @@
+<h1>Shop by Vendors</h1>
+
+{{#each users}}
+    <a href="/clothing/users/{{_id}}">
+        <h3>{{name}}</h3>
+        <p>Rated {{rating}}</p>
+        <p>{{numberOfItems}} listings</p>
+    </a>
+{{/each}}

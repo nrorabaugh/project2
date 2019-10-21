@@ -1,0 +1,23 @@
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selection {
+    margin: 100px 175px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 200px;
+}
+
