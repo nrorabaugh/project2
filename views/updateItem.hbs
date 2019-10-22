@@ -1,9 +1,11 @@
-<h1>Edit Item</h1>
-<form action="/clothing/{{item._id}}?_method=PUT", method= "POST">
-    <input type="text" name="name" value="{{item.name}}"/>
-    <input type="text" name="brand" value="{{item.brand}}"/>
-    <input type="number" name="price" value="{{item.price}}"/>
-    <input type="text" name="type" value="{{item.type}}"/>
-    <input type="text" name="img" value="{{item.img}}"/>
-    <input type="submit" value="Add Item"/>
-</form>
+<div class="page">
+    <h1>Edit Item</h1>
+    <form action="/clothing/{{item._id}}?_method=PUT", method= "POST">
+        <input type="text" name="name" value="{{item.name}}"/>
+        <input type="text" name="brand" value="{{item.brand}}"/>
+        <input type="number" name="price" value="{{item.price}}"/>
+        <input type="text" name="type" value="{{item.type}}"/>
+        <input type="text" name="img" value="{{item.img}}"/>
+        <input type="submit" value="Add Item"/>
+    </form>
+</div>   
