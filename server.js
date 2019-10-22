@@ -4,6 +4,7 @@ const methodOverride = require('method-override')
 
 const { clothingRouter } = require('./controllers/clothing.js')
 const { brandRouter } = require('./controllers/brands.js')
+const { userRouter } = require('./controllers/users.js')
 
 app.use(express.urlencoded({extended: true}))
 
@@ -17,6 +18,7 @@ app.set('view engine', 'hbs')
 
 app.use('/', clothingRouter)
 app.use('/', brandRouter)
+app.use('/', userRouter)
 
 const PORT = process.env.PORT || 3000 
 

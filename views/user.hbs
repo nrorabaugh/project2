@@ -1,0 +1,17 @@
+<a href="/clothing" class="home">
+    Home
+</a>
+<div class="page">
+        <h1>{{user.name}}</h1>
+        <p>{{user.numberOfItems}} Listings</p>
+        
+    <form action="/users/{{user._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Account"/>
+    </form>
+
+    <a href="/users/edit/{{user._id}}">
+        <button>
+            Edit Account
+        </button>
+    </a>
+</div>

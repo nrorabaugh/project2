@@ -4,49 +4,49 @@ const userApi = require('../models/users.js')
 
 const userRouter = express.Router()
 
-userRouter.get('/clothing/users/add', (req, res) => {
+userRouter.get('/users/add', (req, res) => {
   res.render('addUser')
 })
 
-userRouter.get('/clothing/users/:id', (req,res) => {
+userRouter.get('/users/:id', (req,res) => {
     userApi.getItem(req.params.id)
   .then((user) => {
     res.render('updateUser', {user})
   })
 })
  
-userRouter.get('/clothing/users', (req, res) => {
+userRouter.get('/users', (req, res) => {
     userApi.getAllUsers()
     .then((users) => {
       res.render('users', {users})
     })
 })
 
-userRouter.post('/clothing/users', (req, res) => {
+userRouter.post('/users', (req, res) => {
     userApi.addUser(req.body)
     .then(() => {
-      res.redirect('/clothing/users')
+      res.redirect('/users')
     })
 })
 
-userRouter.get('/clothing/users/:id', (req, res) => {
+userRouter.get('/users/:id', (req, res) => {
     userApi.getUser(req.params.id)
   .then((user) => {
     res.render('user', {user})
   })
 })
 
-userRouter.put('/clothing/users/:id', (req, res) => {
+userRouter.put('/users/:id', (req, res) => {
     userApi.updateUser(req.params.id, req.body)
   .then(() => {
     res.redirect(`/clothing/users/${req.params.id}`)
   })
 })
 
-userRouter.delete('/clothing/users/:id', (req, res) => {
+userRouter.delete('/users/:id', (req, res) => {
     userApi.deleteUser(req.params.id)
   .then( () => {
-    res.redirect('/clothing/users')
+    res.redirect('/users')
   })
 })
 
