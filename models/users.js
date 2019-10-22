@@ -1,8 +1,7 @@
 const mongoose = require('./connection.js')
 const UserSchema = new mongoose.Schema({
  name: String,
- numberOfItems: Number,
- rating: Number,
+ numberOfItems: Number
 })
 
 const UserCollection = mongoose.model('Users', UserSchema)

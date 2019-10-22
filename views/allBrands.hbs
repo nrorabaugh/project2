@@ -1,11 +1,5 @@
 <h1>Brands</h1>
 
-<a href="/brands/add">
-    <button>
-        Add New Brand
-    </button>
-</a>
-
 <div class = "brands">
     {{#each brands}}
     <a href="/brands/{{_id}}">
@@ -16,3 +10,9 @@
     </a>
     {{/each}}
 </div>
+
+<a href="/brands/add">
+    <button>
+        Add New Brand
+    </button>
+</a>

@@ -1,0 +1,18 @@
+<a href="/clothing" class="home">
+    Home
+</a>
+<div class="page">
+        <img src="{{brand.logoImg}}">
+        <h1>{{brand.name}}</h1>
+        <p>{{brand.numberOfItems}} Listings</p>
+        
+    <form action="/brands/{{brand._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Brand"/>
+    </form>
+
+    <a href="/brands/edit/{{brand._id}}">
+        <button>
+            Edit Brand
+        </button>
+    </a>
+</div>
