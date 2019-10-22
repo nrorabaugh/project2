@@ -4,12 +4,16 @@ const userApi = require('../models/users.js')
 
 const userRouter = express.Router()
 
+userRouter.get('/users/login', (req,res) => {
+  res.render('login')
+})
+
 userRouter.get('/users/add', (req, res) => {
   res.render('addUser')
 })
 
 userRouter.get('/users/:id', (req,res) => {
-    userApi.getItem(req.params.id)
+    userApi.getUser(req.params.id)
   .then((user) => {
     res.render('updateUser', {user})
   })
