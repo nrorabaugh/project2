@@ -5,6 +5,16 @@
         <img src="{{brand.logoImg}}">
         <h1>{{brand.name}}</h1>
         <p>{{brand.numberOfItems}} Listings</p>
+
+        <div class="selection">
+            {{#each clothes}}
+                <div class="item">
+                    <img src={{img}}/>
+                    <h3>{{name}}</h3>
+                    <p>${{price}}</p>
+                </div>
+            {{/each}}
+        </div>
         
     <form action="/brands/{{brand._id}}?_method=DELETE" method="POST">
         <input type="submit" value="Delete Brand"/>

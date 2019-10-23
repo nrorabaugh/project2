@@ -1,7 +1,7 @@
 const express = require('express')
 
 const brandApi = require('../models/brands.js')
-
+const clothingApi = require('../models/clothing.js')
 const brandRouter = express.Router()
 
 brandRouter.get('/brands/add', (req, res) => {
@@ -32,7 +32,10 @@ brandRouter.post('/brands', (req, res) => {
 brandRouter.get('/brands/:id', (req, res) => {
     brandApi.getBrand(req.params.id)
   .then((brand) => {
-    res.render('brand', {brand})
+    clothingApi.getItemsByBrand(brand.name)
+    .then((clothes) => {
+      res.render('brand', {brand, clothes})
+    })
   })
 })
 

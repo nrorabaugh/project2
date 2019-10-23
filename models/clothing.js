@@ -1,10 +1,12 @@
 const mongoose = require('./connection.js')
+const users = require('./users.js')
 const ClothingSchema = new mongoose.Schema({
  name: String,
  brand: String,
  price: Number,
  type: String,
- img: String
+ img: String,
+ userId: mongoose.ObjectId
 })
 
 const ClothingCollection = mongoose.model('Clothing', ClothingSchema)
@@ -15,6 +17,14 @@ return ClothingCollection.find({})
 
 const getItem = (id) => {
   return ClothingCollection.findOne({"_id": id})
+}
+
+const getItemsByBrand = (name) => {
+  return ClothingCollection.find({"brand": name})
+}
+
+const getItemsByUserId = (id) => {
+  return ClothingCollection.find({"userId": id})
 }
 
 const addItem = (itemData) => {
@@ -32,6 +42,8 @@ const deleteItem = (id) => {
 module.exports = {
   getAllClothes,
   getItem,
+  getItemsByBrand,
+  getItemsByUserId,
   addItem,
   updateItem,
   deleteItem
