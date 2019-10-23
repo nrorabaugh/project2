@@ -14,7 +14,7 @@ userRouter.get('/users/add', (req, res) => {
   res.render('addUser')
 })
 
-userRouter.get('/users/:id', (req,res) => {
+userRouter.get('/users/edit/:id', (req,res) => {
     userApi.getUser(req.params.id)
   .then((user) => {
     res.render('updateUser', {user})
@@ -45,7 +45,7 @@ userRouter.get('/users/:id', (req, res) => {
 userRouter.put('/users/:id', (req, res) => {
     userApi.updateUser(req.params.id, req.body)
   .then(() => {
-    res.redirect(`/clothing/users/${req.params.id}`)
+    res.redirect(`/users/${req.params.id}`)
   })
 })
 

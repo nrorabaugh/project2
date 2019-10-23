@@ -75,3 +75,7 @@ nav a {
     justify-content: flex-start;
     flex-direction: row-reverse;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+}

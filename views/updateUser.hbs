@@ -2,7 +2,10 @@
     <h1>Update Account</h1>
 
     <form action="/users/{{user._id}}?_method=PUT" method="POST">
+    <div class="form">
         <input type="text" name="name" value="{{user.name}}"/>
+        <input type="text" name="password" placeholder="Password"/>
         <input type="submit" value="Save Changes"/>
+    </div>
     </form>
 </div>
