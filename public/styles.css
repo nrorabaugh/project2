@@ -10,7 +10,7 @@
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 34px;
     font-family: Helvetica;
     color: grey;
     font-weight: 100;
@@ -102,4 +102,5 @@ h3 {
     justify-content: center;
     margin: 120px;
     text-transform: uppercase;
+    letter-spacing: 10px;
 }
