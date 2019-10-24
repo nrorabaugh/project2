@@ -101,4 +101,5 @@ h3 {
     display: flex;
     justify-content: center;
     margin: 120px;
+    text-transform: uppercase;
 }
