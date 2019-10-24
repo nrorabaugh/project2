@@ -4,6 +4,10 @@ const clothingApi = require('../models/clothing.js')
 
 const clothingRouter = express.Router()
 
+clothingRouter.get('/', (req,res) => {
+  res.render('home')
+})
+
 clothingRouter.get('/clothing/users', (req, res) => {
   res.render('allUsers')
 })

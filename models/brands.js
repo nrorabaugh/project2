@@ -3,8 +3,6 @@ const BrandSchema = new mongoose.Schema({
  name: String,
  country: String,
  numberOfItems: Number,
- description: String,
- style: String,
  logoImg: String
 })
 
