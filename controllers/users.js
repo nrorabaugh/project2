@@ -54,10 +54,6 @@ userRouter.delete('/users/:id', (req, res) => {
   })
 })
 
-userRouter.get('/', (req, res) => {
-  userApi.setUser(req.body.name)
-})
-
 module.exports = {
     userRouter
 }

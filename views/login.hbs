@@ -11,29 +11,3 @@
 
     <p>New user? <a href="/users/add"><button>New Account</button></a></p>
 </div>
-
-<script>
-    let currentUser = null
-
-    let loginButton = document.getElementsByClassName('login')[0]
-    let userName = document.getElementsByClassName('username')[0]
-
-    const loginFunc = function() {
-        if(currentUser === null) {
-            loginButton.value = 'Log Out'
-            let userSpot = document.getElementsByClassName('user')[0]
-            let userAccount = document.createElement('p')
-            userAccount.innerHTML = userName.value
-            userAccount.className = "currentUser"
-            currentUser = userName.value
-            userSpot.appendChild(userAccount)
-        } else {
-          currentUser = null
-          userSpot.removeChild(lastChild)
-          loginButton.value = 'Log In'
-          console.log('null')
-        }
-    }
-
-    loginButton.addEventListener('click', loginFunc)
-</script>
