@@ -27,10 +27,21 @@ const deleteUser = (id) => {
   return UserCollection.deleteOne({"_id": id})
 }
 
+let currentUser = document.getElementsByClassName('currentUser')[0]
+
+const setUser = (userName) => {
+  if(currentUser == undefined) {
+    return
+  } else {
+    currentUser.innerHTML = userName
+  }
+}
+
 module.exports = {
   getAllUsers,
   getUser,
   addUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  setUser
 }
