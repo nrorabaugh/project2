@@ -1,3 +1,7 @@
+// if (process.env.NODE_ENV !== 'production') {
+//     require('./.env').config()
+// }
+
 const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
@@ -5,6 +9,25 @@ const methodOverride = require('method-override')
 const { clothingRouter } = require('./controllers/clothing.js')
 const { brandRouter } = require('./controllers/brands.js')
 const { userRouter } = require('./controllers/users.js')
+
+// let usersApi = require('./models/users.js')
+// let passport = require('passport')
+// let initializePassport = require('./controllers/passport-config.js')
+// let flash = require('express-flash')
+// let session = require('express-session')
+
+// initializePassport( passport, name => usersApi.find({'name': name}) )
+
+// app.use(flash())
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false
+// }))
+
+// app.use(passport.initialize())
+
+// app.use(passport.session())
 
 app.use(express.urlencoded({extended: true}))
 

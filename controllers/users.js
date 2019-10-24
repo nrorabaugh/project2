@@ -4,8 +4,6 @@ const userApi = require('../models/users.js')
 
 const userRouter = express.Router()
 
-let currentUser = ""
-
 userRouter.get('/users/login', (req,res) => {
   res.render('login')
 })
