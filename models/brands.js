@@ -6,6 +6,8 @@ const BrandSchema = new mongoose.Schema({
  logoImg: String
 })
 
+clothingApi = require('./clothing.js')
+
 const BrandCollection = mongoose.model('Brands', BrandSchema)
 
 const getAllBrands = () => {
@@ -13,7 +15,10 @@ const getAllBrands = () => {
 }
 
 const getBrand = (id) => {
-    return BrandCollection.findOne({"_id": id})
+    let brand = BrandCollection.findOne({"_id": id})
+    brand.numberOfItems = clothingApi.getItemsByBrand(brand.name)
+    console.log(brand.numberOfItems)
+    return brand
 }
 
 const addBrand = (itemData) => {
