@@ -2,6 +2,7 @@
     <h1>Update {{brand.name}}</h1>
     <form action="/brands/{{brand._id}}?_method=PUT" method="POST">
         <input type="text" name="name" value="{{brand.name}}"/>
+        <input type="text" name="country" value="{{brand.country}}"/>
         <input type="text" name="logoImg" value="{{brand.logoImg}}"/>
         <input type="submit" value="Add Brand"/>
     </form>
